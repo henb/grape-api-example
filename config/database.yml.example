@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: grape_api_example
+  password: 111111
+
+development:
+  host: localhost
+  database: grape_api_example_development
+  <<: *default
+
+test:
+  database: grape_api_example_test
+  <<: *default
+
+production:
+  database: grape_api_example_production
+  <<: *default
