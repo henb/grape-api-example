@@ -11,6 +11,10 @@ Bundler.require(*Rails.groups)
 
 module GrapeApiExample
   class Application < Rails::Application
+
+    config.paths.add File.join('app', 'api_app'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'api_app', '*')]
+
     config.generators do |g|
       g.test_framework false
       g.integration_tool false
