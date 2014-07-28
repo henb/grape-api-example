@@ -1,3 +1,5 @@
+require "grape-swagger"
+
 module API::Mobile
   class Root < Grape::API
     prefix 'mobile'
@@ -18,5 +20,12 @@ module API::Mobile
     end
 
     mount Posts
+
+    add_swagger_documentation api_version: "v1",
+                              mount_path:"/api/doc",
+                              hide_documentation_path: "/api/doc/swagger_doc",
+                              info: { description: '' },
+                              markdown: true
+
   end
 end
