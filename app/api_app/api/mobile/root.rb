@@ -24,7 +24,11 @@ module API::Mobile
     add_swagger_documentation api_version: "v1",
                               mount_path:"/api/doc",
                               hide_documentation_path: "/api/doc/swagger_doc",
-                              info: { description: 'This is simple grape-api-example' },
+                              info: { title:       "Mobile API by henb",
+                                      description: 'This is simple grape-api-example',
+                                      contact:     "henb2015@gmail.com",
+                                      license:     "henb2015",
+                                      license_url: "https://github.com/henb" },
                               markdown: true
 
   end
