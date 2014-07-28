@@ -24,7 +24,7 @@ module API::Mobile
     add_swagger_documentation api_version: "v1",
                               mount_path:"/api/doc",
                               hide_documentation_path: "/api/doc/swagger_doc",
-                              info: { description: '' },
+                              info: { description: 'This is simple grape-api-example' },
                               markdown: true
 
   end
