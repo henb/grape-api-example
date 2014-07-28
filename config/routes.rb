@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   mount API::Root => '/'
+  mount GrapeSwaggerRails::Engine => '/api'
 end

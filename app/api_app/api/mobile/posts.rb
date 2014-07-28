@@ -1,6 +1,5 @@
 module API::Mobile
   class Posts < Grape::API
-
     helpers do
       attr_accessor :post
 
@@ -27,7 +26,7 @@ module API::Mobile
         post :create do
           post = Post.new title: params[:title], description: params[:description]
 
-          response error_message: post.errors.to_a.join(", ").downcase unless post.save
+          response error_message: post.errors.to_a.join(', ').downcase unless post.save
           response 201, message: 'Post created!'
         end
 

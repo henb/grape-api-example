@@ -1,6 +1,6 @@
 module API::Mobile::Helpers
   module RootHelper
-    def response(code, hash={})
+    def response(code, hash = {})
       if hash[:error_message]
         hash[:status] = 'error'
         error!(hash, code)

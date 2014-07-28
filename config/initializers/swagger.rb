@@ -1,0 +1,5 @@
+GrapeSwaggerRails.options.url      = 'mobile/v1/api/doc'
+GrapeSwaggerRails.options.app_name = 'Mobile API'
+GrapeSwaggerRails.options.app_url = '/'
+GrapeSwaggerRails.options.api_key_name = 'you_key'
+GrapeSwaggerRails.options.api_key_type = 'query'
