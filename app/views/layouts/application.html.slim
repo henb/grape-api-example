@@ -7,6 +7,17 @@ html lang="en"
     = stylesheet_link_tag    "application"
     = csrf_meta_tags
   body
-    .container
-      = yield
-      = javascript_include_tag "application"
+  h1
+  .container
+    = link_to "API","/api", class: "btn btn-default"
+    '
+    = link_to "API","/api", class: "btn btn-primary"
+    '
+    = link_to "API","/api", class: "btn btn-danger"
+    '
+    = link_to "API","/api", class: "btn btn-warning"
+    '
+    = link_to "API","/api", class: "btn btn-success"
+    '
+    = yield
+    = javascript_include_tag "application"
