@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
 
+gem 'bootstrap-sass', '~> 3.1.1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'grape'
 gem 'grape-swagger-rails', github: 'henb/grape-swagger-rails'
