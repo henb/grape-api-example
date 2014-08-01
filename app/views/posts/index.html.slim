@@ -1,6 +1,6 @@
 h1 Listing posts
 
-table
+table.table
   thead
     tr
       th Title
@@ -19,5 +19,6 @@ table
         td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
-
+.center
+  = will_paginate @posts
 = link_to 'New Post', new_post_path
