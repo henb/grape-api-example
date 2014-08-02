@@ -1,0 +1,23 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    title= content_for?(:title) || yield(:title) || "Grape API Example"
+    = stylesheet_link_tag    "application"
+    = csrf_meta_tags
+  body
+  h1
+  .container
+    = link_to "API","/api", class: "btn btn-lg btn-default"
+    '
+    = link_to "API","/api", class: "btn btn-lg btn-primary"
+    '
+    = link_to "API","/api", class: "btn btn-lg btn-danger"
+    '
+    = link_to "API","/api", class: "btn btn-lg btn-warning"
+    '
+    = link_to "API","/api", class: "btn btn-lg btn-success"
+    '
+    = yield
+    = javascript_include_tag "application"

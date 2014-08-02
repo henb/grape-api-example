@@ -1,10 +1,9 @@
 h1 Listing posts
 
-table
+table.table
   thead
     tr
       th Title
-      th Description
       th
       th
       th
@@ -13,11 +12,11 @@ table
     - @posts.each do |post|
       tr
         td = post.title
-        td = post.description
         td = link_to 'Show', post
         td = link_to 'Edit', edit_post_path(post)
         td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
-
-= link_to 'New Post', new_post_path
+.center
+  = will_paginate @posts
+= link_to 'New Post', new_post_path, class: "btn btn-success"
