@@ -10,3 +10,4 @@ Install it yourself as:
 ## Usage
 
 CRUD Post to `/`
+View API to `/api`
