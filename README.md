@@ -9,5 +9,6 @@ Install it yourself as:
 
 ## Usage
 
-CRUD Post to `/`
-View API to `/api`
+CRUD Posts visit to `http://0.0.0.0:3000/`
+
+View API visit to `http://0.0.0.0:3000/api`
