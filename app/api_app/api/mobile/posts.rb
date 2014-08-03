@@ -14,6 +14,14 @@ module API::Mobile
         response 200, posts: Post.all
       end
 
+      desc 'create post'
+      post do
+        post = Post.new title: params[:title], description: params[:description]
+
+        response error_message: post.errors.to_a.join(', ').downcase unless post.save
+        response 201, message: 'Post created!'
+      end
+g
       params { requires :id, type: Integer, desc: 'Uniq ID for post' }
       route_param :id do
 
@@ -22,14 +30,6 @@ module API::Mobile
           set_post
           response 200, post: post
         end
-
-        post :create do
-          post = Post.new title: params[:title], description: params[:description]
-
-          response error_message: post.errors.to_a.join(', ').downcase unless post.save
-          response 201, message: 'Post created!'
-        end
-
         post :destroy do
           set_post.destroy
           response 201, message: 'Post deleted!'
