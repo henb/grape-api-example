@@ -21,7 +21,7 @@ module API::Mobile
         response error_message: post.errors.to_a.join(', ').downcase unless post.save
         response 201, message: 'Post created!'
       end
-g
+
       params { requires :id, type: Integer, desc: 'Uniq ID for post' }
       route_param :id do
 
