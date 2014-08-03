@@ -16,8 +16,8 @@ module API::Mobile
 
       desc 'Create post'
       params do
-        requires :title, type: String, desc: "Post title"
-        requires :description, type: String, desc: "Post description"
+        requires :title, type: String, desc: 'Post title'
+        requires :description, type: String, desc: 'Post description'
       end
       post do
         post = Post.new(title: params[:title], description: params[:description])
