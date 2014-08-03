@@ -16,9 +16,9 @@ module API::Mobile
 
       desc 'create post'
       post do
-        post = Post.new title: params[:title], description: params[:description]
+        post = Post.new(title: params[:title], description: params[:description])
 
-        response error_message: post.errors.to_a.join(', ').downcase unless post.save
+        response 400, error_message: post.errors.to_a.join(', ').downcase unless post.save
         response 201, message: 'Post created!'
       end
 
